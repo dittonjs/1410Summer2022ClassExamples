@@ -1,0 +1,6 @@
+/.idea/.gitignore
+/src/StringFormatting.java
+/src/com/usu/database/Database.java
+/src/com/usu/database/Model.java
+/src/com/usu/database/Serializer.java
+/src/com/usu/Main.java
