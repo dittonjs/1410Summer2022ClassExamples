@@ -4105,3 +4105,185 @@ import java.util.stream.Collectors;","","95","1656691883787","Main.java","1.1.3 
 "e","",".","3086","1656692881755","Main.java","1.1.3 for 2021-2022 @t1",
 "e","f","","3086","1656692881847","Main.java","1.1.3 for 2021-2022 @t1",
 "k","f",,"3087","1656692881849","Main.java","1.1.3 for 2021-2022 @t1",
+"e","","package com.usu;
+
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class Main {
+
+    public static void main(String[] args) {
+	// write your code here
+        int numPrisoners = 100;
+        double numSuccesses = 0;
+        double numAttempts = 1000;
+
+        for (int i = 0; i < numAttempts; i++) {
+            // for each experiment
+            int[] boxes = new int[numPrisoners];
+            // fill up array with prisoner numbers
+            for (int prinsonerNum = 0; prinsonerNum < numPrisoners; prinsonerNum ++) {
+                 oxes[prinsonerNum] = prinsonerNum;
+            }
+            // do some magic
+            List<Integer> list = Arrays.stream(boxes)
+                    .boxed()
+                    .collect(Collectors.toList());
+            Collections.shuffle(list);
+            boxes = list.stream()
+                    .mapToInt(Integer::intValue)
+                    .toArray();
+            boolean allFound = true;
+            for (int prisoner = 0; prisoner < 100; prisoner++) {
+                int box = prisoner;
+                int checkedBox = boxes[box];
+                int attemptNum = 1;
+                while(checkedBox != prisoner && attemptNum < 50) {
+                    box = checkedBox;
+                    checkedBox = boxes[box];
+                    attemptNum ++;
+                }
+                if (checkedBox != prisoner) {
+                    allFound = false;
+                    break;
+                }
+            }
+            if (allFound) {
+                numSuccesses ++;
+            }
+        }
+        double ontrontrolSuccesses = 0;
+        doubCle numontrolAttempts = 1000;
+        for (int i = 0; i < numControlAttempts; i++) {
+            // for each experiment
+            int[] boxes = new int[numPrisoners];
+            // fill up array with prisoner numbers
+            for (int prinsonerNum = 0; prinsonerNum < numPrisoners; prinsonerNum ++) {
+                boxes[prinsonerNum] = prinsonerNum;
+            }
+            // do some magic
+
+            boolean allFound = true;
+            for (int prisoner = 0; prisoner < 100; prisoner++) {
+                List<Integer> list = Arrays.stream(boxes)
+                        .boxed()
+                        .collect(Collectors.toList());
+                Collections.shuffle(list);
+                boxes = list.stream()
+                        .mapToInt(Integer::intValue)
+                        .toArray();
+                int box = 0;
+                for (; box < 50; box ++) {
+                    if (boxes[box] == prisoner) {
+                        break;
+                    }
+                }
+                if (boxes[box] != prisoner) {
+                    allFound = false;
+                    break;
+                }
+            }
+
+            if (allFound) {
+                numControlSuccesses ++;
+            }
+        }
+
+        System.out.printf(""Odds of prisoners escaping are: %f\n"", numSuccesses / numAttempts);
+        System.out.printf(""Odds of prisoners escaping are: %f\n"", numCSuccesses / numCAtteonontroltrolmpts);
+    }
+}
+","0","1657035450951","Main.java","1.1.3 for 2021-2022 @t1",
+"e","package com.usu;
+
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class Main {
+
+    public static void main(String[] args) {
+	// write your code here
+        int numPrisoners = 100;
+        double numSuccesses = 0;
+        double numAttempts = 1000;
+
+        for (int i = 0; i < numAttempts; i++) {
+            // for each experiment
+            int[] boxes = new int[numPrisoners];
+            // fill up array with prisoner numbers
+            for (int prinsonerNum = 0; prinsonerNum < numPrisoners; prinsonerNum ++) {
+                boxes[prinsonerNum] = prinsonerNum;
+            }
+            // do some magic
+            List<Integer> list = Arrays.stream(boxes)
+                    .boxed()
+                    .collect(Collectors.toList());
+            Collections.shuffle(list);
+            boxes = list.stream()
+                    .mapToInt(Integer::intValue)
+                    .toArray();
+            boolean allFound = true;
+            for (int prisoner = 0; prisoner < 100; prisoner++) {
+                int box = prisoner;
+                int checkedBox = boxes[box];
+                int attemptNum = 1;
+                while(checkedBox != prisoner && attemptNum < 50) {
+                    box = checkedBox;
+                    checkedBox = boxes[box];
+                    attemptNum ++;
+                }
+                if (checkedBox != prisoner) {
+                    allFound = false;
+                    break;
+                }
+            }
+            if (allFound) {
+                numSuccesses ++;
+            }
+        }
+        double numControlSuccesses = 0;
+        double numControlAttempts = 1000;
+        for (int i = 0; i < numControlAttempts; i++) {
+            // for each experiment
+            int[] boxes = new int[numPrisoners];
+            // fill up array with prisoner numbers
+            for (int prinsonerNum = 0; prinsonerNum < numPrisoners; prinsonerNum ++) {
+                boxes[prinsonerNum] = prinsonerNum;
+            }
+            // do some magic
+
+            boolean allFound = true;
+            for (int prisoner = 0; prisoner < 100; prisoner++) {
+                List<Integer> list = Arrays.stream(boxes)
+                        .boxed()
+                        .collect(Collectors.toList());
+                Collections.shuffle(list);
+                boxes = list.stream()
+                        .mapToInt(Integer::intValue)
+                        .toArray();
+                int box = 0;
+                for (; box < 50; box ++) {
+                    if (boxes[box] == prisoner) {
+                        break;
+                    }
+                }
+                if (boxes[box] != prisoner) {
+                    allFound = false;
+                    break;
+                }
+            }
+
+            if (allFound) {
+                numControlSuccesses ++;
+            }
+        }
+
+        System.out.printf(""Odds of prisoners escaping are: %f\n"", numSuccesses / numAttempts);
+        System.out.printf(""Odds of prisoners escaping are: %f\n"", numControlSuccesses / numControlAttempts);
+    }
+}
+","","0","1657035450951","Main.java","1.1.3 for 2021-2022 @t1",
