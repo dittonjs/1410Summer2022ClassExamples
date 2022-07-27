@@ -1,0 +1,12 @@
+/.idea/.gitignore
+/src/com/usu/Main.java
+/Student.java
+/src/com/usu/Student.java
+/src/com/usu/Point.java
+/src/com/usu/showyourwork/Rectangle.java
+/src/com/usu/showyourwork/Triangle.java
+/src/com/usu/showyourwork/PointCollection.java
+/src/com/usu/showyourwork/Enemy.java
+/src/com/usu/showyourwork/MeleeEnemy.java
+/src/com/usu/showyourwork/RangedEnemy.java
+/src/com/usu/showyourwork/AttackBehavior.java
