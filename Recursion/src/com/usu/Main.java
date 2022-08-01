@@ -5,14 +5,14 @@ public class Main {
     public static void main(String[] args) {
 	// write your code here
         char[][] world = {
-                {' ',' ',' ',' ',' ',' ','*',' '},
-                {' ',' ',' ',' ',' ','*',' ',' '},
-                {' ',' ',' ',' ','*',' ',' ',' '},
-                {' ',' ',' ','*',' ',' ',' ',' '},
-                {' ',' ','*',' ',' ',' ',' ',' '},
-                {' ','*',' ',' ',' ',' ',' ',' '},
-                {'*',' ',' ',' ',' ',' ',' ',' '},
                 {' ',' ',' ',' ',' ',' ',' ',' '},
+                {' ',' ',' ',' ',' ','*',' ','*'},
+                {' ',' ',' ',' ','*','*',' ','*'},
+                {' ',' ',' ','*','*','*',' ','*'},
+                {' ',' ','*','*','*','*',' ','*'},
+                {' ','*',' ',' ',' ',' ',' ',' '},
+                {'*','*','*','*',' ',' ',' ',' '},
+                {' ',' ',' ','*',' ',' ',' ',' '},
         };
 
         int[] data = {1,44,345,3,2,3,5,6,66,344,3,2,34,2};
@@ -28,12 +28,17 @@ public class Main {
             System.out.println();
         }
 
+        System.out.println(computeSum(10));
+
     }
 
     public static int computeSum(int value) {
-        // base case
-        if (value == 0) return 0;
-        return value + computeSum(value - 1);
+        return computeSum(value, 0);
+    }
+
+    public static int computeSum(int value, int sum) {
+        if (value == 0) return sum;
+        return computeSum(value - 1, sum + value);
     }
 
     public static int fib(int n) {
