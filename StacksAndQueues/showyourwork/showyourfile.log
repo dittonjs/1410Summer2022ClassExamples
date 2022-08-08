@@ -1,0 +1,7 @@
+/.idea/.gitignore
+/src/com/usu/Main.java
+/Stack.java
+/src/com/usu/Stack.java
+/src/com/usu/FixedSizeQueue.java
+/src/FixedSizeStack.java
+/src/com/usu/FixedSizeStack.java

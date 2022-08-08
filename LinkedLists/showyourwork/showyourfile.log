@@ -1,0 +1,5 @@
+/.idea/.gitignore
+/LinkedList.java
+/src/com/usu/Main.java
+/src/com/usu/LinkedList.java
+/src/com/usu/SortedLinkedList.java
